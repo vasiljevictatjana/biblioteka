@@ -40,9 +40,6 @@ public class Biblioteka implements BibliotekaInterfejs {
 			throw new RuntimeException("Morate uneti neki kriterijum.");
 		LinkedList<Knjiga> rezultat = new LinkedList<Knjiga>();
 		
-		if(naslov==null && ISBN<=0 && izdavac==null && autor==null)
-			return knjige;
-		
 		if(ISBN >0)
 			for (int i = 0; i < knjige.size(); i++) {
 				if(knjige.get(i).getISBN() == ISBN)
